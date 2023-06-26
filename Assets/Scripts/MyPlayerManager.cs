@@ -28,6 +28,8 @@ namespace Photon.Pun.Racer
         private int SkillInterval = 3;
         private float lastSkillTime = 0;
 
+        private CarUserControl m_CarControl;
+        
         [SerializeField] private SpriteRenderer[] racerRenders;
 
         #region MonoBehaviour CallBacks
@@ -37,13 +39,16 @@ namespace Photon.Pun.Racer
         /// </summary>
         public void Awake()
         {
+            m_CarControl = GetComponentInChildren<CarUserControl>();
+
             // #Important
             // used in GameManager.cs: we keep track of the localPlayer instance to prevent instanciation when levels are synchronized
             if (photonView.IsMine)
             {
                 LocalPlayerInstance = gameObject;
+                m_CarControl.SetIsMain(true);
             }
-
+            
             // #Critical
             // we flag as don't destroy on load so that instance survives level synchronization, thus giving a seamless experience when levels load.
             DontDestroyOnLoad(gameObject);
@@ -61,6 +66,7 @@ namespace Photon.Pun.Racer
                 if (photonView.IsMine)
                 {
                     _cameraWork.OnStartFollowing(gameObject);
+                    
                 }
             }
             else

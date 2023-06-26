@@ -21,8 +21,18 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car = GetComponent<CarController>();
         }
 
+        private bool IsMine;
+
+        public void SetIsMain(bool ismain)
+        {
+            IsMine = ismain;
+        }
         private void FixedUpdate()
         {
+            if (!IsMine)
+            {
+                return;
+            }
             if (!MyGameManager.Instance.StartGame)
             {
                 return;
