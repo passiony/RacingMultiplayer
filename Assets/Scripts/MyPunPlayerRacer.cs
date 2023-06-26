@@ -28,24 +28,15 @@ namespace Photon.Pun.Racer
     {
         public static int GetPlayerRacer(this Player player)
         {
-            if (player == null) {
-                return -1;
-            }
-
             if (PhotonNetwork.OfflineMode)
             {
                 return 0;
             }
-            if (!PhotonNetwork.IsConnectedAndReady)
-            {
-                return -1;
-            }
-
             object value;
             if (player.CustomProperties.TryGetValue (MyPlayerNumbering.RoomPlayerRacerProp, out value)) {
                 return (byte)value;
             }
-            return -1;
+            return 0;
         }
 
         public static void SetPlayerRacer(this Player player, int racerNumber)

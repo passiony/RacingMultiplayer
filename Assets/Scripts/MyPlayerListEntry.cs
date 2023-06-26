@@ -89,7 +89,7 @@ namespace Photon.Pun.Racer
                 if (p.ActorNumber == ownerId)
                 {
                     PlayerColorImage.color = RacerGame.GetColor(p.GetPlayerNumber());
-                    PlayerReadyButton.GetComponentInChildren<Text>().text = RacerGame.GetRacer(p.GetPlayerRacer());
+                    PlayerRacerButton.GetComponentInChildren<Text>().text = RacerGame.GetRacer(p.GetPlayerRacer());
                 }
             }
         }
@@ -102,7 +102,7 @@ namespace Photon.Pun.Racer
 
         public void SetRacer(int racer)
         {
-            PlayerReadyButton.GetComponentInChildren<Text>().text = RacerGame.GetRacer(racer);
+            PlayerRacerButton.GetComponentInChildren<Text>().text = RacerGame.GetRacer(racer);
         }
     }
 }

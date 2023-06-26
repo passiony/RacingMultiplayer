@@ -37,10 +37,10 @@ namespace Photon.Pun.Racer
         {
             switch (racer)
             {
-                case 0: return "Cat";
-                case 1: return "Dog";
-                case 2: return "Tiger";
-                case 3: return "Bear";
+                case 0: return "Panda";
+                case 1: return "Tiger";
+                case 2: return "Fox";
+                case 3: return "Pig";
             }
 
             return "Cat";
