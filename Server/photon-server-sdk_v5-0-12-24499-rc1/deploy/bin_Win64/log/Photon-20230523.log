@@ -1,0 +1,7 @@
+15608: 16:41:02.054 - ---
+15608: 16:41:02.054 - Service: "Photon Socket Server" starting
+15608: 16:41:02.055 - Config File: C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonServer.config
+15608: 16:41:02.056 - Will produce at most: 10 crash dumps
+15608: 16:41:02.056 - Construction of service object complete
+15608: 16:41:02.056 - Service shutting down
+15608: 16:41:02.057 - Service shut down complete

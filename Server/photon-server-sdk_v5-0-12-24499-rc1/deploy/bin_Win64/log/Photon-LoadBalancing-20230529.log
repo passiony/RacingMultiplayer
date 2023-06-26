@@ -1,0 +1,339 @@
+19636: 10:00:08.399 - ---
+19636: 10:00:08.399 - Service: "Photon Socket Server" starting
+19636: 10:00:08.399 - Config File: C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonServer.config
+19636: 10:00:08.399 - Config|INFO| Adding config path macro: "[CONFIG]" - "C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64"
+19636: 10:00:08.399 - Config|INFO| Adding config path macro: "[DEPLOY]" - "[CONFIG]\.."
+19636: 10:00:08.399 - Config|INFO| Adding config path macro: "[EXE]" - "C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64"
+19636: 10:00:08.400 - Will produce at most: 10 crash dumps
+19636: 10:00:08.400 - Construction of service object complete
+19636: 10:00:08.402 - Server Starting...
+19636: 10:00:08.402 -    Tick count: 6661062 (wraps in: 49.6332 days)
+19636: 10:00:08.402 - Tick count 64: 6661062
+19636: 10:00:08.402 - ENet high resolution Tick count: 6661311 (wraps in: 49.6332 days)
+19636: 10:00:08.402 - Photon Version: 5.0.12.7770
+19636: 10:00:08.402 - Photon Build: RELEASE - x64 - VS2019 (16.8) - 192829336
+19636: 10:00:08.402 - PID: 19632
+19636: 10:00:08.402 - EXE: C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonSocketServer.exe
+19636: 10:00:08.402 - OpenSSL 1.1.1i  8 Dec 2020
+19636: 10:00:08.404 - Config File: C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonServer.config
+19636: 10:00:08.404 - Will NOT log unimportant exceptions
+19636: 10:00:08.405 - Performance Counter Configuration for: "Photon Socket Server"
+19636: 10:00:08.405 - CPerformanceCounterInstaller::DumpCounterConfiguration() - Counters are not installed
+19636: 10:00:08.405 - Counters are installed? - "Photon Socket Server"
+19636: 10:00:08.405 - Not using perfmon performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+19636: 10:00:08.405 - Using in-proc performance counters, access via Interop API only
+19636: 10:00:08.410 - Shutdown timeout enabled: 60000ms
+19636: 10:00:08.410 - Starting I/O thread pool with 4 threads
+19724: 10:00:08.410 - InitialiseWorkerThread - I/O thread - COM enabled
+19728: 10:00:08.410 - InitialiseWorkerThread - I/O thread - COM enabled
+19636: 10:00:08.410 - ENet: buffer size: 4096
+19636: 10:00:08.410 - ENet: buffer pool: 5000
+19636: 10:00:08.410 - Max message size: 512000
+19732: 10:00:08.410 - InitialiseWorkerThread - I/O thread - COM enabled
+19636: 10:00:08.410 - CMultiPoolBufferAllocator::GetAllocator() - "CENetThreadPool"
+19736: 10:00:08.410 - InitialiseWorkerThread - I/O thread - COM enabled
+19740: 10:00:08.410 - Initialise - ENet thread pool thread
+19744: 10:00:08.410 - Initialise - ENet thread pool thread
+19748: 10:00:08.410 - Initialise - ENet thread pool thread
+19752: 10:00:08.410 - Initialise - ENet thread pool thread
+19756: 10:00:08.410 - Initialise - ENet thread pool thread
+19760: 10:00:08.410 - Initialise - ENet thread pool thread
+19764: 10:00:08.410 - Initialise - ENet thread pool thread
+19636: 10:00:08.410 - Starting ENet thread pool with the following settings
+19636: 10:00:08.410 - InitialThreads: 8 threads
+19636: 10:00:08.410 - MinThreads: 8 threads
+19636: 10:00:08.410 - Thread pool is fixed size
+19636: 10:00:08.410 - OnlyDispatchTimers: False
+19768: 10:00:08.410 - Initialise - ENet thread pool thread
+19636: 10:00:09.563 - Resolution ~ 150054 - 15ms
+19636: 10:00:09.563 - ENet timer granularity: 15ms
+19636: 10:00:09.563 - ENet high performance timers: False
+19636: 10:00:09.564 - Config|INFO| TCP S2S: no explicit configuration, using defaults. Add a <S2S> node to configure.
+19636: 10:00:09.564 - Config|INFO| TCP S2S:  - flow control: Max queued bytes: 50000
+19636: 10:00:09.564 - Config|INFO| TCP S2S:  - flow control: Notification step size: 25
+19636: 10:00:09.564 - Config|INFO| TCP S2S:  - no read timeout
+19636: 10:00:09.564 - Config|INFO| TCP S2S:  - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:09.564 - Config|INFO| TCP S2S: Nagle: disabled
+19636: 10:00:09.564 - Config|INFO| TCP S2S: PingFrequency: 2500
+19636: 10:00:09.564 - Config|INFO| TCP S2S: MaxInboundMessageSize: 512000
+19636: 10:00:09.565 - Config|INFO| TCP S2S: MaxOutboundMessageSize: 512000
+19636: 10:00:09.565 - Config|INFO| TCP S2S: ConnectTimeout: 30000ms
+19636: 10:00:09.565 - Config|INFO| TCP S2S: No App Data inactivity timeout
+19636: 10:00:09.565 - Config|INFO| TCP S2S: No write completion timeout
+19636: 10:00:09.566 - GetRuntime - About to load CLR - versions available:
+19636: 10:00:09.566 - v2.0.50727
+19636: 10:00:09.566 - v4.0.30319
+19636: 10:00:09.566 - Configuration requests: "v4.0.30319"
+19636: 10:00:09.566 - About to load version: "v4.0.30319"
+19636: 10:00:09.568 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+19636: 10:00:09.568 - CLRBaseDirectory set to "C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy"
+19636: 10:00:09.568 - Start: About to load CLR - versions available:
+19636: 10:00:09.568 - v2.0.50727
+19636: 10:00:09.568 - v4.0.30319
+19636: 10:00:09.568 - No preference in configuration file, will load latest.
+19636: 10:00:09.568 - About to load version: "v4.0.30319"
+19636: 10:00:09.568 - Using server GC
+19636: 10:00:09.568 - GC: Server garbage collector enabled
+19636: 10:00:09.568 - GC: Concurrent garbage collector enabled
+19636: 10:00:09.568 - GC: Trim on commit disabled
+19636: 10:00:09.568 - Using CLR config file: C:\UnityProjects\pun2demo\Server\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonSocketServer.exe.config
+19636: 10:00:09.568 - Loaded version: "v4.0.30319"
+19636: 10:00:09.804 - Photon host runtime loaded
+19636: 10:00:11.104 - License is valid.
+19636: 10:00:11.104 - Licensed for 100 concurrent connections.
+19636: 10:00:11.104 - ENet: Ping interval: 1000 ms
+19636: 10:00:11.104 - ENet: Data sending delay: 5 ms
+19636: 10:00:11.104 - ENet: ACK sending delay: 5 ms
+19636: 10:00:11.104 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+19636: 10:00:11.104 - ENet: Per peer bandwidth limit
+19636: 10:00:11.104 - ENet: Transmit Rate Limit: 256 KB/Sec
+19636: 10:00:11.104 - ENet: Limit period: 200ms
+19636: 10:00:11.104 - ENet: Limit per period: 52428 bytes
+19636: 10:00:11.104 - ENet: Max queued data for transmission per peer: 512000 bytes
+19636: 10:00:11.104 - ENet: Minimum retransmit timeout: 200
+19636: 10:00:11.104 - ENet: No Maximum retransmit timeout
+19636: 10:00:11.104 - ENet: Minimum timeout: 5000ms
+19636: 10:00:11.104 - ENet: Maximum timeout: 30000ms
+19636: 10:00:11.104 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+19636: 10:00:11.104 - ENet: Will validate inbound ENet datagram CRC if present
+19636: 10:00:11.104 - ENet: No RTT ACK adjustment timeout
+19636: 10:00:11.104 - ENet: Packet throttle enabled: True
+19636: 10:00:11.104 - ENet: Default packet throttle: 32
+19636: 10:00:11.104 - ENet: Packet throttle scale: 32
+19636: 10:00:11.104 - ENet: Packet throttle counter: 7
+19636: 10:00:11.104 - ENet: Round Trip throttle multiplier: 2
+19636: 10:00:11.104 - ENet: Unreliable Queue timeout: 5ms
+19636: 10:00:11.104 - ENet: AO: Initial queue size: 4096
+19636: 10:00:11.104 - ENet: AO: Max consecutive ops: 200
+19636: 10:00:11.104 - ENet: max pooled buffers in peer: 10
+19636: 10:00:11.104 - ENet: Packet trace ring buffer size: 10
+19636: 10:00:11.104 - ENet: No Application data inactivity timeout
+19636: 10:00:11.104 - CMultiPoolBufferAllocator::GetAllocator() - "CENetHost"
+19636: 10:00:11.104 - Config|INFO| New TCP: Max message size: 512000
+19636: 10:00:11.104 - About to load application: Master from Photon.LoadBalancing
+19636: 10:00:12.474 - Taking reference on default app domain
+19636: 10:00:12.712 - Application: "Master" started in app domain: 2
+19636: 10:00:12.712 - About to load application: Game from Photon.LoadBalancing
+19636: 10:00:13.964 - Taking reference on default app domain
+19636: 10:00:14.098 - Application: "Game" started in app domain: 3
+19636: 10:00:14.098 - About to load application: NameServer from Photon.NameServer
+19636: 10:00:15.322 - Taking reference on default app domain
+19636: 10:00:15.414 - Application: "NameServer" started in app domain: 4
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - adding listener
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - listen backlog: 150
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - flow control: Max queued bytes: 50000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - flow control: Notification step size: 25
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - read timeout: 10000ms
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - nagle disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - send "Fast Path" disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - Forcing all applications ids to: "Master"
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - MaxInboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - MaxOutboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - no message rate limit - Set RateLimitMessagesSec to configure.
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4530 - Recording performance counters in instance: New TCP: 0.0.0.0:4530
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - adding listener
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - listen backlog: 150
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - flow control: Max queued bytes: 50000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - flow control: Notification step size: 25
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - read timeout: 10000ms
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - nagle disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - send "Fast Path" disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - Forcing all applications ids to: "Game"
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - MaxInboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - MaxOutboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - no message rate limit - Set RateLimitMessagesSec to configure.
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4531 - Recording performance counters in instance: New TCP: 0.0.0.0:4531
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - adding listener
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - listen backlog: 150
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - flow control: Max queued bytes: 50000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - flow control: Notification step size: 25
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - read timeout: 10000ms
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - nagle disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - send "Fast Path" disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - Forcing all applications ids to: "NameServer"
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - MaxInboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - MaxOutboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - no message rate limit - Set RateLimitMessagesSec to configure.
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4533 - Recording performance counters in instance: New TCP: 0.0.0.0:4533
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - adding listener
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - listen backlog: 150
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - flow control: Max queued bytes: 50000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - flow control: Notification step size: 25
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - read timeout: 10000ms
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - nagle disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - send "Fast Path" disabled
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - MaxInboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - MaxOutboundMessageSize: 512000
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - no message rate limit - Set RateLimitMessagesSec to configure.
+19636: 10:00:15.414 - Config|INFO| New TCP: 0.0.0.0:4520 - Recording performance counters in instance: New TCP: 0.0.0.0:4520
+19636: 10:00:15.414 - ENet: Host Settings: EncTypesAllowed: ALL
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - adding listener
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - listen backlog: 150
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - flow control: Max queued bytes: 50000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - flow control: Notification step size: 25
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - read timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - nagle disabled
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - MaxInboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - MaxOutboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - Recording performance counters in instance: *:9090::Master
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - Recording performance counters in instance: *:9090::Master
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - Recording performance counters in instance: *:9090::Master
+19636: 10:00:15.415 - Config|INFO| *:9090::Master - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - Per route performance counters are disabled when there's only one route
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+19636: 10:00:15.415 - Config|INFO| *:9090::Master:/* - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9090::Master:/* - peer type: WebSocket
+19636: 10:00:15.415 - Config|INFO| *:9090::Master:/* - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9090::Master:/* - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| *:9090::Master:/* - Forcing all applications ids to: "Master"
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - adding listener
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - listen backlog: 150
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - flow control: Max queued bytes: 50000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - flow control: Notification step size: 25
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - read timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - nagle disabled
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - MaxInboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - MaxOutboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - Recording performance counters in instance: *:9091::Game
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - Recording performance counters in instance: *:9091::Game
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - Recording performance counters in instance: *:9091::Game
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - Per route performance counters are disabled when there's only one route
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+19636: 10:00:15.415 - Config|INFO| *:9091::Game:/* - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9091::Game:/* - peer type: WebSocket
+19636: 10:00:15.415 - Config|INFO| *:9091::Game:/* - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9091::Game:/* - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| *:9091::Game:/* - Forcing all applications ids to: "Game"
+19636: 10:00:15.415 - Config|INFO| *:9091::Game - websocket ping: 2000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - adding listener
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - listen backlog: 150
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - flow control: Max queued bytes: 50000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - flow control: Notification step size: 25
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - read timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - rate limit: 32000 bytes per 250ms (125KB/sec)
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - nagle disabled
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - MaxInboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - MaxOutboundMessageSize: 512000
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - Recording performance counters in instance: *:9093::NameServer
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - Recording performance counters in instance: *:9093::NameServer
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - disable nagle: True
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - Recording performance counters in instance: *:9093::NameServer
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - Per route performance counters are disabled when there's only one route
+19636: 10:00:15.415 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer:/* - permitted origins: "*"
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer:/* - peer type: WebSocket
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer:/* - adding cache suppression headers
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer:/* - inactivity timeout: 10000ms
+19636: 10:00:15.415 - Config|INFO| *:9093::NameServer:/* - Forcing all applications ids to: "NameServer"
+19636: 10:00:15.809 - Service is running...
+19636: 17:06:00.001 - Service is stopped...
+19636: 17:06:00.001 - Server shutting down...
+19636: 17:06:00.001 - Shutdown monitoring enabled, 60000ms before process abort
+19636: 17:06:00.001 - Notifying CLR applications of shutdown...
+19636: 17:06:00.001 - RequestApplicationStop: 3
+19636: 17:06:01.009 - RequestApplicationStop: 2
+19636: 17:06:01.012 - RequestApplicationStop: 4
+19636: 17:06:01.014 - RequestStop: defalt app domain
+19636: 17:06:01.015 - Shutting down NEW TCP Outbound Connection Manager...
+19636: 17:06:01.015 - Shutting down ENet host...
+19636: 17:06:01.015 - Disconnecting all peers...
+19636: 17:06:01.015 - Shutting down socket servers...
+19636: 17:06:01.015 - Shutting down ENet thread pool...
+19636: 17:06:01.015 - Shutting down TCP inactivity timers...
+19636: 17:06:01.015 - Timer queue stats: TCP Timers
+19636: 17:06:01.015 - Stats are not available
+19636: 17:06:01.015 - Shutting down ENet timers...
+19636: 17:06:01.015 - Waiting for socket servers to shutdown...
+19636: 17:06:01.015 - WaitingForShutdownToComplete: HTTP: 0.0.0.0:9090 (*:9090::Master)
+19636: 17:06:01.015 - OnShutdownCompleted: HTTP: 0.0.0.0:9090 (*:9090::Master)
+19636: 17:06:01.015 - WaitingForShutdownToComplete: HTTP: 0.0.0.0:9091 (*:9091::Game)
+19636: 17:06:01.015 - OnShutdownCompleted: HTTP: 0.0.0.0:9091 (*:9091::Game)
+19636: 17:06:01.015 - WaitingForShutdownToComplete: HTTP: 0.0.0.0:9093 (*:9093::NameServer)
+19636: 17:06:01.015 - OnShutdownCompleted: HTTP: 0.0.0.0:9093 (*:9093::NameServer)
+19636: 17:06:01.015 - WaitingForShutdownToComplete: New TCP: 0.0.0.0:4520
+19636: 17:06:01.015 - OnShutdownCompleted: New TCP: 0.0.0.0:4520
+19636: 17:06:01.015 - WaitingForShutdownToComplete: New TCP: 0.0.0.0:4530
+19636: 17:06:01.015 - OnShutdownCompleted: New TCP: 0.0.0.0:4530
+19636: 17:06:01.015 - WaitingForShutdownToComplete: New TCP: 0.0.0.0:4531
+19636: 17:06:01.015 - OnShutdownCompleted: New TCP: 0.0.0.0:4531
+19636: 17:06:01.015 - WaitingForShutdownToComplete: New TCP: 0.0.0.0:4533
+19636: 17:06:01.015 - OnShutdownCompleted: New TCP: 0.0.0.0:4533
+19636: 17:06:01.015 - Shutting down I/O thread pool...
+19636: 17:06:01.016 - Shutting down CLR applications...
+19880: 17:06:01.018 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+19636: 17:06:01.022 - Shutting down network data traces...
+19636: 17:06:01.022 - Waiting for network data traces to complete...
+19636: 17:06:01.022 - Destroying servers
+19636: 17:06:01.022 - Destroying WebRTC Outbound Connection Manager
+19636: 17:06:01.022 - Destroying WebRTC Outbound Host
+19636: 17:06:01.022 - Destroying outbound ICE connection manager
+19636: 17:06:01.022 - Destroying ENet timer wheel
+19636: 17:06:01.022 - Timer queue stats: ENetTimerWheel
+19636: 17:06:01.022 - Stats are not available
+19636: 17:06:01.022 - Destroying Network Data Trace factory
+19636: 17:06:01.022 - Destroying ENet host
+19636: 17:06:01.022 - Destroying WebRTC inactivity timer queue
+19636: 17:06:01.022 - Destroying WebRTC host
+19636: 17:06:01.022 - Destroying ICE connection manager
+19636: 17:06:01.022 - Flushing stream socket allocator...
+19636: 17:06:01.022 - Flushing UDP Chunk datagram socket allocator...
+19636: 17:06:01.022 - Flushing NEW TCP socket allocator...
+19636: 17:06:01.022 - Destroying TCP inactivity timer
+19636: 17:06:01.022 - Flushing ENET buffer allocator...
+19636: 17:06:01.022 - Flushing TCP buffer allocator...
+19636: 17:06:01.022 - Flushing TCP buffer handle allocator...
+19636: 17:06:01.022 - Destroying CLR applications
+19636: 17:06:01.022 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+19880: 17:06:01.026 - CManagedHost::OnDomainUnload() - 3
+19880: 17:06:01.053 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+19880: 17:06:01.062 - CManagedHost::OnDomainUnload() - 4
+19880: 17:06:01.067 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+19880: 17:06:01.075 - CManagedHost::OnDomainUnload() - 2
+19636: 17:06:01.083 - ~CCLRApplicationCollection() - Done. All objects released
+19636: 17:06:01.083 - ~CManagedHost() - Release default app domain
+19636: 17:06:01.083 - CManagedHost::OnDomainUnload() - 1
+19636: 17:06:01.083 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+19636: 17:06:01.090 - ~CManagedHost
+19636: 17:06:01.090 - Destroying ENet thread pool
+19636: 17:06:01.090 - Destroying I/O thread pool
+19636: 17:06:01.090 - Destroying HTTP File Server I/O thread pool
+19636: 17:06:01.090 - Destroying ENet I/O thread pool
+19636: 17:06:01.090 - Destroying ENet buffer allocator
+19636: 17:06:01.090 - Destroying TCP buffer allocator
+19636: 17:06:01.090 - Destroying TCP socket allocator
+19636: 17:06:01.090 - Destroying NEW TCP socket allocator
+19636: 17:06:01.090 - Destroying NEW TCP configuration
+19636: 17:06:01.090 - Config|INFO| New TCP: Flushing TCP socket allocator...
+19636: 17:06:01.090 - Config|INFO| New TCP: Flushing TCP buffer allocator...
+19636: 17:06:01.091 - Config|INFO| New TCP: Flushing TCP buffer handle allocator...
+19636: 17:06:01.091 - Config|INFO| New TCP: Flushing policy file buffer allocator...
+19636: 17:06:01.091 - Destroying UDP Chunk inbound socket allocator
+19636: 17:06:01.091 - Destroying shared datagram flow control data
+19636: 17:06:01.091 - Shutdown complete...
+19636: 17:06:01.092 - Service shutting down
+19636: 17:06:01.587 - Service shut down complete
