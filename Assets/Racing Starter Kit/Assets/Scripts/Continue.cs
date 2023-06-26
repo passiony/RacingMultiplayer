@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using Photon.Pun.Racer;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 //this script is used in the Play button from the first menu and the Continue button when you finish the race
 public class Continue : MonoBehaviour
@@ -7,11 +9,21 @@ public class Continue : MonoBehaviour
     //also, it is used if we hit restart in the pause menu
     public void Restart()
     {   //void restart is used in continue buttons when we finish the race and in return button of the pause menu
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//so it will restart the game's scene
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//so it will restart the game's scene
+        SceneManager.LoadScene("LobbyScene");
     }
     //if we hit play in the menu at the start of the scene we will use the Play void:
     public void Play()
-    {   //all the racing stuff turns on
+    {
+        StartCoroutine(CoPlay());
+    }
+
+    IEnumerator CoPlay()
+    {
+        yield return new WaitForSeconds(2);
+
+        MyGameManager.Instance.StartGame = true;
+        //all the racing stuff turns on
         RaceUI.SetActive(true); //racing UI
         Countdown.SetActive(true);  //countdown UI (3,2,1,go)
         Checkpoints.SetActive(true); //racetrack checkpoints

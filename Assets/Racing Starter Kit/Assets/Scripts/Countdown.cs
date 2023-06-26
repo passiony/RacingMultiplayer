@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
     [SerializeField] private GameObject CountDown, LapTimer, CarControls;//race objects that we will use in the coroutine
-    [SerializeField] private AudioSource GetReady, GoAudio;//same with audio objects
+    [SerializeField] private AudioClip GetReady, GoAudio;//same with audio objects
+    private AudioSource m_AudioClip;//same with audio objects
 
     void Start()
     {
+        m_AudioClip = GetComponent<AudioSource>();
         StartCoroutine(CountStart());//when we hit play in the first menu, this scripts activates and start the countdown coroutine
     }
 
@@ -19,22 +21,24 @@ public class Countdown : MonoBehaviour
         //3, 2, 1 Countdown
         yield return new WaitForSeconds(0.5f);
         CountDown.GetComponent<Text>().text = "3";//we start with the 3
-        GetReady.Play();//play the ready noise (normal pitch bell)
+        m_AudioClip.clip = GetReady;
+        m_AudioClip.Play();//play the ready noise (normal pitch bell)
         CountDown.SetActive(true);//and activate it in the game UI
         yield return new WaitForSeconds(1);//after one second
         CountDown.SetActive(false);//turn off the UI
         CountDown.GetComponent<Text>().text = "2";//changes to 2
-        GetReady.Play();//play the ready noise (normal pitch bell)
+        m_AudioClip.Play();//play the ready noise (normal pitch bell)
         CountDown.SetActive(true);//and activate it in the game UI
         yield return new WaitForSeconds(1);//same process for the number 1 after another second
         CountDown.SetActive(false);
         CountDown.GetComponent<Text>().text = "1";
-        GetReady.Play();
+        m_AudioClip.Play();
         CountDown.SetActive(true);
         //and now that 3 seconds have passed, it's time to start the race
         yield return new WaitForSeconds(1);
         CountDown.SetActive(false);//turn of the countdown UI numbers
-        GoAudio.Play();//play the go noise (high pitch bell)
+        m_AudioClip.clip = GoAudio;
+        m_AudioClip.Play();//play the go noise (high pitch bell)
         LapTimer.SetActive(true);//make the race time start running (LapTimeManager.cs script)
         CarControls.SetActive(true);//and activate player and AI bots cars controls (CarControlActive.cs script)
     }

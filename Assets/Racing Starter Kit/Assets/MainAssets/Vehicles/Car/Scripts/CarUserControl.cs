@@ -1,14 +1,19 @@
 using System;
+using System.Collections;
+using Photon.Pun;
+using Photon.Pun.Racer;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
-    [RequireComponent(typeof (CarController))]
+    [RequireComponent(typeof(CarController))]
     public class CarUserControl : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
-
+        [SerializeField] private int jump = 10;
+        [SerializeField] private int Accel = 10;
+        [SerializeField] private Transform endPos;
 
         private void Awake()
         {
@@ -16,9 +21,13 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car = GetComponent<CarController>();
         }
 
-
         private void FixedUpdate()
         {
+            if (!MyGameManager.Instance.StartGame)
+            {
+                return;
+            }
+
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
@@ -28,6 +37,21 @@ namespace UnityStandardAssets.Vehicles.Car
 #else
             m_Car.Move(h, v, v, 0f);
 #endif
+        }
+
+        public void Jump()
+        {
+            gameObject.GetComponent<Rigidbody>().velocity += new Vector3(0, jump, 0);
+        }
+
+        public void Accelarate()
+        {
+            gameObject.GetComponent<Rigidbody>().velocity += transform.forward * Accel;
+        }
+
+        public void GenObstacle()
+        {
+            PhotonNetwork.Instantiate("Obstacle", endPos.position, Quaternion.identity, 0);
         }
     }
 }

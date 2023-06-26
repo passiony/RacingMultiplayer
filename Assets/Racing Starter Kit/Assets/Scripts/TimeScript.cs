@@ -23,11 +23,11 @@ public class TimeScript : MonoBehaviour
         {
             ChangeState();
         }
-        //fast time mode with 'tab' key
-        if (Input.GetKeyDown("tab") && Time.timeScale == 1)
-        {
-            Time.timeScale = 3;
-        }
+        // //fast time mode with 'tab' key
+        // if (Input.GetKeyDown("tab") && Time.timeScale == 1)
+        // {
+        //     Time.timeScale = 3;
+        // }
     }
     //when you press 'esc' key, pause void activates
     public void Pause()
