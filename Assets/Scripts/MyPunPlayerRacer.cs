@@ -21,7 +21,7 @@ namespace Photon.Pun.Racer
     /// </summary>
     public class MyPunPlayerRacer : MonoBehaviour
     {
-        public const string PlayerScoreProp = "score";
+        public const string PlayerRacerProp = "racer";
     }
 
     public static class RaserExtensions

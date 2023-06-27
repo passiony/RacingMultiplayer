@@ -127,7 +127,7 @@ public class ChkManager : MonoBehaviour
         //if the player completes all the selected laps
         if (LapsSelected < nLapsP[0])
         {
-            RaceFinishTrigger.SetActive(true);//the race finish will trigger, ending the race
+            //RaceFinishTrigger.SetActive(true);//the race finish will trigger, ending the race
         }
         //show the amount of completed laps in the game UI
         LapCounter.GetComponent<Text>().text = Convert.ToString(nLapsP[0]);

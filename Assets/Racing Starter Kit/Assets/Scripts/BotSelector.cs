@@ -13,7 +13,7 @@ public class BotSelector : MonoBehaviour
 
     private void Start()
     {
-        nBots = 1;//at the start of the game, the number of selected bots is 1
+        nBots = 2;//at the start of the game, the number of selected bots is 1
 
         AICars = FindObjectsOfType(typeof(GameObject)) as GameObject[];
         foreach (GameObject go in AICars)

@@ -8,6 +8,7 @@
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
 
+using ExitGames.Client.Photon;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Realtime;
@@ -30,11 +31,13 @@ namespace Photon.Pun.Racer
         private GameObject instance;
 
         public bool StartGame;
-        
+
         [SerializeField] private Transform[] bornPoints;
 
         [SerializeField] private GameObject playerPrefab;
 
+        [SerializeField] private RaceFinish raceFinish;
+        
         #region MonoBehaviour CallBacks
 
         /// <summary>
@@ -66,13 +69,16 @@ namespace Photon.Pun.Racer
                     Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    var born = bornPoints[0];
+                    int carPos = 0;
                     if (!PhotonNetwork.IsMasterClient)
                     {
-                        born = bornPoints[1];
+                        carPos = 1;
                     }
 
-                    PhotonNetwork.Instantiate(this.playerPrefab.name, born.position, Quaternion.identity, 0);
+                    var born = bornPoints[carPos];
+                    var player =
+                        PhotonNetwork.Instantiate(this.playerPrefab.name, born.position, Quaternion.identity, 0);
+                    player.GetComponentInChildren<ChkTrigger>().CarPosListNumber = carPos;
                     FindObjectOfType<Continue>().Play();
                 }
                 else
@@ -138,7 +144,32 @@ namespace Photon.Pun.Racer
             SceneManager.LoadScene("LobbyScene");
         }
 
+        public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
+        {
+            if (changedProps != null && changedProps.ContainsKey(MyPunPlayerLaps.PlayerLapsProp))
+            {
+                CheckEndOfGame();
+            }
+        }
+
         #endregion
+
+        private void CheckEndOfGame()
+        {
+            bool allDestroyed = true;
+
+            foreach (Player p in PhotonNetwork.PlayerList)
+            {
+                object laps;
+                if (p.CustomProperties.TryGetValue(MyPunPlayerLaps.PlayerLapsProp, out laps))
+                {
+                    if ((int)laps > LapSelector.nLaps)
+                    {
+                        raceFinish.ShowFinish(p.IsLocal);
+                    }
+                }
+            }
+        }
 
         public bool LeaveRoom()
         {

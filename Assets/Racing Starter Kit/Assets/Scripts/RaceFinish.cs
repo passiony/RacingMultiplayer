@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 //this script is used when the player completes all the laps of the race (when the race finishes)
 public class RaceFinish : MonoBehaviour
 {
@@ -14,6 +13,12 @@ public class RaceFinish : MonoBehaviour
 
     void OnTriggerEnter()//the race finish trigger will activate when ChkManager.cs script detects that you completed all laps
     {
+        // bool win = PosDisplay.GetComponent<Text>().text == "1st Place";
+        // ShowFinish(win);
+    }
+
+    public void ShowFinish(bool win)
+    {
         this.GetComponent<BoxCollider>().enabled = false;//the race finish trigger collider turns off to avoid triggering twice
         FinishCam.SetActive(true);//finish camera gets activated
         //Race UI gets deactivated once the race finishes
@@ -22,7 +27,7 @@ public class RaceFinish : MonoBehaviour
         ViewModes.SetActive(false);
 
         //if you win (you finish 1st position)
-        if (PosDisplay.GetComponent<Text>().text == "1st Place")
+        if (win)
         {
             FinishPanelWin.SetActive(true);//win panel turns on
             FinishPanelLose.SetActive(false);//lose panel turns off

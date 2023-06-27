@@ -6449,6 +6449,7 @@ MonoBehaviour:
   - {fileID: 1479284973}
   playerPrefab: {fileID: 434763767444419705, guid: 71c9e7a2b60dede4cb165d66140ddb76,
     type: 3}
+  raceFinish: {fileID: 1529471950}
 --- !u!1001 &724620079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10637,7 +10638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1118878056
 Transform:
   m_ObjectHideFlags: 0
@@ -12263,7 +12264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 2
 --- !u!222 &1341721342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13972,7 +13973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1529471949
 Transform:
   m_ObjectHideFlags: 0

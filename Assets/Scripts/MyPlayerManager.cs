@@ -19,7 +19,7 @@ namespace Photon.Pun.Racer
     /// Player manager.
     /// Handles fire Input and Beams.
     /// </summary>
-    public class MyPlayerManager : MonoBehaviourPunCallbacks, IPunObservable
+    public class MyPlayerManager : MonoBehaviourPunCallbacks,IPunObservable
     {
         public static GameObject LocalPlayerInstance;
         private bool leavingRoom;
@@ -179,20 +179,9 @@ namespace Photon.Pun.Racer
 
         #endregion
 
-        #region IPunObservable implementation
-
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
         {
-            if (stream.IsWriting)
-            {
-                // We own this player: send the others our data
-            }
-            else
-            {
-                // Network player, receive data
-            }
+            
         }
-
-        #endregion
     }
 }

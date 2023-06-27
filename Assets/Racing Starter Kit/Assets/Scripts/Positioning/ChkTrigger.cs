@@ -1,7 +1,9 @@
 ﻿using System;
+using Photon.Pun;
+using Photon.Pun.Racer;
 using UnityEngine;
 
-public class ChkTrigger : MonoBehaviour
+public class ChkTrigger : MonoBehaviourPunCallbacks
 {
     //this script takes the count of the checkpoints and laps passed of each player in the race
     //and then calculates it as score with the distance from the last passed checkpoint
@@ -9,42 +11,50 @@ public class ChkTrigger : MonoBehaviour
     public static bool startDis;
     private int nCheckpointNumber, kPos, CurrentChk, NextChk;
     public int CarPosListNumber;
+    public int laps = 0;
 
     private void Start()
     {
-        if (transform.parent.name.Length == 6)//one-digit number name has 6 characters (for example: AICar4)
-        {
-            CarPosListNumber =  int.Parse(transform.parent.name.Substring(transform.parent.name.Length - 1));//get the last character (4)
-        }
-        if (transform.parent.name.Length == 7)//two-digit numbers name has 7 characters (for example: AICar17)
-        {
-            CarPosListNumber = int.Parse(transform.parent.name.Substring(transform.parent.name.Length - 2));//get the last 2 characters (17)
-        }
-        if (CarPosListNumber == 0)
-        {
-            gameObject.name = "CarPos" + CarPosListNumber;
-        }
-        else
-        {
-            if (transform.parent.name.Length == 6)//one-digit number name has 9 characters (for example: CarPosAI4)
-            {
-                gameObject.name = "CarPosAI0" + CarPosListNumber;
-            }
-            if (transform.parent.name.Length == 7)//one-digit number name has 9 characters (for example: CarPosAI4)
-            {
-                gameObject.name = "CarPosAI" + CarPosListNumber;
-            }
-        }
+        // if (transform.parent.name.Length == 6)//one-digit number name has 6 characters (for example: AICar4)
+        // {
+        //     CarPosListNumber =  int.Parse(transform.parent.name.Substring(transform.parent.name.Length - 1));//get the last character (4)
+        // }
+        // if (transform.parent.name.Length == 7)//two-digit numbers name has 7 characters (for example: AICar17)
+        // {
+        //     CarPosListNumber = int.Parse(transform.parent.name.Substring(transform.parent.name.Length - 2));//get the last 2 characters (17)
+        // }
+        // if (CarPosListNumber == 0)
+        // {
+        gameObject.name = "CarPos" + CarPosListNumber;
+        // }
+        // else
+        // {
+        //     if (transform.parent.name.Length == 6)//one-digit number name has 9 characters (for example: CarPosAI4)
+        //     {
+        //         gameObject.name = "CarPosAI0" + CarPosListNumber;
+        //     }
+        //     if (transform.parent.name.Length == 7)//one-digit number name has 9 characters (for example: CarPosAI4)
+        //     {
+        //         gameObject.name = "CarPosAI" + CarPosListNumber;
+        //     }
+        // }
         CurrentChk = 0;
         NextChk = 1;
+        photonView.Controller.SetLaps(0);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+        
         //Substring takes the last number of the Chk
         if (other.gameObject.name.Substring(0, 3) == "Chk")
         {
-            ChkManager.nDistP[CarPosListNumber]/*position 0 in chk manager arrays stands for player 1*/  = 0;//set the distance from checkpoint to 0 when crossing it
+            ChkManager.nDistP[CarPosListNumber] /*position 0 in chk manager arrays stands for player 1*/ =
+                0; //set the distance from checkpoint to 0 when crossing it
             for (int i = 0; i < this.name.Length; i++)
             {
                 if (other.gameObject.name.Substring(i, 1) == "k")
@@ -53,20 +63,26 @@ public class ChkTrigger : MonoBehaviour
                     break;
                 }
             }
+
             //get the last character of the string which is the checkpoint number (i.e: "chk2", the last character is 2)
-            nCheckpointNumber = Convert.ToInt32(other.gameObject.name.Substring(kPos, other.gameObject.name.Length - kPos));
+            nCheckpointNumber =
+                Convert.ToInt32(other.gameObject.name.Substring(kPos, other.gameObject.name.Length - kPos));
             if (CurrentChk + 1 == nCheckpointNumber)
             {
-                ChkManager.nChk[CarPosListNumber]/*position 0 in chk manager arrays stands for player 1*/ = nCheckpointNumber;
+                ChkManager.nChk[CarPosListNumber] /*position 0 in chk manager arrays stands for player 1*/ =
+                    nCheckpointNumber;
                 CurrentChk += 1;
                 NextChk += 1;
 
-                if (nCheckpointNumber == 1)//if the next checkpoint you have to pass is number 1
-                {//that means that you passed all the checkpoints
+                if (nCheckpointNumber == 1) //if the next checkpoint you have to pass is number 1
+                {
+                    //that means that you passed all the checkpoints
                     startDis = true;
-                    ChkManager.nLapsP[CarPosListNumber]/*position 0 in chk manager arrays stands for player 1*/ += 1;//and a lap is added to the lap counter
-                    CurrentChk = 1;//and the current checkpoint will be 1 (being 2 the next checkpoint)
-                    if (CarPosListNumber == 0)//if trigchk it's located in player 1
+                    photonView.Controller.AddLaps(1);
+                    ChkManager.nLapsP[CarPosListNumber] /*position 0 in chk manager arrays stands for player 1*/ +=
+                        1; //and a lap is added to the lap counter
+                    CurrentChk = 1; //and the current checkpoint will be 1 (being 2 the next checkpoint)
+                    if (CarPosListNumber == 0) //if trigchk it's located in player 1
                     {
                         //the lap time will reset to 0 to make a new one
                         LapTimeManager.MinuteCount = 0;
@@ -75,6 +91,7 @@ public class ChkTrigger : MonoBehaviour
                     }
                 }
             }
+
             //if the next checkpoint doesn't exist, then you reached the last checkpoint of the circuit
             if (GameObject.Find("Chk" + NextChk) == null)
             {
@@ -83,5 +100,9 @@ public class ChkTrigger : MonoBehaviour
                 NextChk = 1;
             }
         }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
     }
 }
